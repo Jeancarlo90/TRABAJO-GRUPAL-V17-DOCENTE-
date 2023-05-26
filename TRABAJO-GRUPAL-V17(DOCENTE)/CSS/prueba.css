@@ -1,0 +1,15 @@
+.Titulo{
+    background-color: rgb(211, 211, 211);
+    height: 70px;   
+    margin: auto;
+    text-align: center ;
+    padding: 10px;
+}   
+
+li{
+    list-style:none;
+    margin-top: 20px;
+}
+.Profesor{
+    border: 1px outset;
+}

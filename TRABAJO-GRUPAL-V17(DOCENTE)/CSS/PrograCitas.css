@@ -1,0 +1,114 @@
+*{
+    /*tipo de letra*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: purple;
+}
+
+.contenido-citas{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 15 px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    
+}
+
+.contenido-citas header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.contenido-citas form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #f2f2f2;
+}
+
+.contenido-citas form .contenido-citas{
+    margin-top: 30px;
+}
+
+.contenido-citas form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.contenido-citas form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*para que no salgan en una sola fila:*/
+    flex-wrap: wrap;
+    
+}
+
+form .fields .input-field{
+    display: flex;
+    width: calc(100%/4 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input{
+    outline: noe;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.contenido-citas form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: purple;
+    border-radius: 5px;
+    margin: 15px 0;
+    background-color: white;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #969CFF;
+}

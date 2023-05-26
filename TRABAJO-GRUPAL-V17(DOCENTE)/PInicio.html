@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/PInicio.css" type="text/CSS">
+    <title>Pagina De Inicio</title>
+    <!--https://cdnjs.com/libraries/font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="BarraInicial">
+        <div class="BarraDeFondo">
+            <div class="imagen">
+                <!--https://fontawesome.com/-->
+                <i class="fa-sharp fa-solid fa-user"></i>
+            </div>
+            <input id="Usuario" type="Text" name="Username" class="estilo" placeholder="Usuario" required>
+            <input id="Contraseña" type="password" name="Password" class="estilo" placeholder="Contraseña" required>
+            <div class="BarraSeleccionado">
+            <input id="Mostrar" type="checkbox" name="MostrarContraseña" class="Mostrar" onclick="MostrarContraseña()"> Mostrar Contraseña
+            </div>
+            <br>
+            <button id="Boton" class="Boton" onclick="cargar()">Iniciar Sesion</button>
+            <a href="PCrearCuenta.html" class="CrearCuenta" target="_self">Crear Cuenta</a>
+        </div>
+    </div>
+    <script src="JAVA/PInicial.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*si aumenta margenes, no amplie el tam de pantalla*/
+    box-sizing: border-box;
+}
+
+
+head {
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+img{
+    width: 400px;
+}
+
+p{
+    font: 150% sans-serif;
+}
+.star {
+    font-size: 28px;
+    color: #bbb;
+    transition: color 0.3s;
+    cursor: pointer;
+
+}
+
+/*cuando coloque el puntero encima*/
+.star:hover, 
+.star.checked{
+    color: gold;
+
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* de Mcitas */
+

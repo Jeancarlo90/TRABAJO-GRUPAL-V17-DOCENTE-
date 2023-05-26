@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/PInicio.css" type="text/CSS">
+    <title>Inicio</title>
+</head>
+<body>
+    <div class="BarraInicial2">
+        <div class="BarraDeFondo2">
+            <div id="Elegir">
+                <div id="efecto"></div>
+                <button type="button" id="seleccion" class="presionar" onclick="Do()">Docente</button>
+                <button type="button" id="seleccion" class="presionar" onclick="Est()">Estudiante</button>
+            </div>
+            <div id="Docente" class="Registro">
+                <input type="text" class="estilo" placeholder="Nombre Completo">
+                <input type="text" class="estilo" placeholder="Documento de identidad">
+                <input type="text" class="estilo" placeholder="Profesión">
+                <select name="select" class="estilo" id="universidades" placeholder="Universidad principal donde dicta clases">
+                    <option selected>Universidad donde dicta</option>
+                    <option value="">Universidad de Lima</option>
+                    <option value="">Universidad de Piura</option>
+                    <option value="">Universidad del Pacifico</option>
+                    <option value="">Pontifica Universidad Catolica del Peru</option>
+                    <option value="">Universidad San Ignacio de Loyola</option>
+                </select>
+                <select name="select" class="estilo" id="cursos" placeholder="Universidad principal donde dicta clases">
+                    <option selected>Curso de especialidad</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                </select>
+                <input type="text" class="estilo" placeholder="Presentación del docente">
+                <input type="text" class="estilo" placeholder="Usuario">
+                <input type="text" class="estilo" placeholder="Contraseña">
+                <button id="Boton" class="Boton">Registarse</button>
+                <a href="PInicio.html" class="RegresarInicio" target="_self">Regresar a Inicio</a>
+            </div>
+
+            <div id="Estudiante" class="Registro">
+                <input type="text" class="estilo" placeholder="Nombre Completo">
+                <input type="text" class="estilo" placeholder="Documento de identidad">
+                <select name="select" class="estilo" id="universidades" placeholder="Universidad principal donde dicta clases">
+                    <option selected>Universidad de procedencia</option>
+                    <option value="">Universidad de Lima</option>
+                    <option value="">Universidad de Piura</option>
+                    <option value="">Universidad del Pacifico </option>
+                    <option value="">Pontifica Universidad Catolica del Peru</option>
+                    <option value="">Universidad San Ignacio de Loyola</option>
+                </select>
+                <select name="select" class="estilo" id="cursos" placeholder="Universidad principal donde dicta clases">
+                    <option selected>Carrera que estudia</option>
+                    <option value="">Ingenieria industrial</option>
+                    <option value="">Ingenieria de sistemas</option>
+                    <option value="">Ingenieria civil</option>
+                    <option value="">Administracion</option>
+                    <option value="">Comunicacion</option>
+                    <option value="">Derecho</option>
+                </select>
+                <input type="text" class="estilo" placeholder="Usuario">
+                <input type="text" class="estilo" placeholder="Contraseña">
+                <button id="Boton" class="Boton">Registarse</button>
+                <a href="PInicio.html" class="RegresarInicio" target="_self">Regresar a Inicio</a>
+            </div>
+        </div>
+    </div>
+    <script src="JAVA/PInicial.js" ></script>
+</body>
+</html>

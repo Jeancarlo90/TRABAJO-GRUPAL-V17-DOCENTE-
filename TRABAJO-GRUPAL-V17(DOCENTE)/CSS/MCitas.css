@@ -1,0 +1,73 @@
+.barra_rosa {
+    background-color: rgb( 243, 237, 247);
+}
+
+.navbar {
+    background-color: rgb( 243, 237, 247);
+}
+
+.navbar .Titu{
+    display: flex;
+    justify-content: center;
+}
+.badge {
+    background-color: rgb( 234, 221, 255);
+}
+
+
+.row .col-sm {
+    color: blueviolet;
+    border-color: blueviolet;
+
+}
+
+.row .col-sm .btn-light {
+    color: blueviolet;
+    border-color: blueviolet;
+    display: flex;
+    justify-content: center;
+}
+
+.barra_rosa .row .badge {
+    font-weight: bolder;
+    color: blueviolet;
+}
+
+.barra_rosa .row {
+    padding: 5px;
+}
+
+.text-center {
+    padding: 10px;
+}
+
+
+li{
+    list-style:none;
+    margin-top: 20px;
+}
+
+.navbar img {
+    height: 30px;
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.titulo {
+    display: flex;
+}
+
+/* esto es de cal asesoria */
+.imagenprofe {
+    width: 150px;
+    height: 150px;
+}
+
+.comentario {
+    padding: 2px;
+    
+}

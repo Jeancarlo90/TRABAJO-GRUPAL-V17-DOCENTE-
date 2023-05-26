@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=
+    , initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+
+
+    <link rel="stylesheet" href="CSS/prueba.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+
+    <title>Mi Perfil</title>
+
+    <style>
+        .tagify--outside {
+            border: 0;
+        }
+
+        .tagify--outside .tagify__input {
+            order: -1;
+            flex: 100%;
+            border: 1px solid #6750A4;
+            margin-bottom: 1em;
+            transition: .1s;
+            border-radius: 5px;
+        }
+
+        .tagify--outside .tagify__input:hover {
+            border-color: #6750A4;
+            border-width: 3px;
+            border-radius: 5px;
+        }
+
+        .tagify--outside.tagify--focus .tagify__input {
+            transition: 0s;
+            border-color: #6750A4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Titulo">
+        <h1>Atencion de Citas</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline"></span>
+                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="EncabeyLat.html">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="busqueda.html">Busqueda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MostrarCitas.html">Horarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CitasDocente.html">Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="NotasDocente.html">Calificaciones</a>
+                    </li>
+                    <hr>
+                </div>
+            </div>
+            <div class="col py-3">
+                <div class="px-4">
+                    <hr size="4px" color="black" />
+                    <div class='row'>
+                        <div class='col-4'>
+                            <h3> Mi Perfil</h3>
+                        </div>
+                        <div class='col-8'>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-outline-primary me-md-2" style="color: #6750A4; border-color: #6750A4;" type="button">Cancelar</button>
+                                <button class="btn btn-primary" style="background: #6750A4; border-color: #6750A4;" type="button">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    </hr>
+                    <h6>Informacion Personal</h6>
+                    <div class='row'>
+                        <div class='col-8'>
+
+                            <div class='row'>
+                                <div class="form-floating col-4">
+                                    <input type="text" class="form-control" id="nameInput" placeholder=""></input>
+                                    <label for="nameInput">Nombres</label>
+                                </div>
+
+                                <div class="form-floating col-4">
+                                    <input type="text" class="form-control" id="lastNameInput" placeholder=""></input>
+                                    <label for="lastNameInput">Apellidos</label>
+                                </div>
+
+                                <div class="form-floating col-4">
+                                    <input type="text" class="form-control" id="documentTypeInput"
+                                        placeholder=""></input>
+                                    <label for="documentTypeInput">Tipo de Documento</label>
+                                </div>
+                            </div>
+
+                            <div class='row mt-3'>
+                                <div class="form-floating col-4">
+                                    <input type="text" class="form-control" id="rolInput" placeholder=""></input>
+                                    <label for="rolInput">Rol</label>
+                                </div>
+
+                                <div id="contenedorRole" class="form-floating col-4">
+
+                                </div>
+
+
+                                <div class="form-floating col-4">
+                                    <input type="text" class="form-control" id="numberInput" placeholder=""></input>
+                                    <label for="numberInput">Numero</label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class='col-4'>
+                            <img src="https://media.istockphoto.com/id/157418797/es/foto/el-profesor.jpg?s=1024x1024&w=is&k=20&c=usanwEEySOx2FsOqpleCjcT6vOpUzMhwb7xkikE2j6E="
+                                width="300" height="200" class="img-thumbnail mx-auto d-block" alt="..."></img>
+                            <div class='text-center' ><a href=' ' class='text-decoration-none'>
+                                    <h6 style=" color: #6750A4;">Adjuntar Foto</h6>
+                                </a></div>
+                        </div>
+                    </div>
+
+                    <div style="background: #FEF7FF;">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-home-tab"
+                                    style="border: #FEF7FF; color: #6750A4;" data-bs-toggle="tab"
+                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">Datos de Usuario</button>
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                    style="border: #FEF7FF; color: #6750A4;" data-bs-target="#nav-profile" type="button"
+                                    role="tab" aria-controls="nav-profile" aria-selected="false">Universidad</button>
+                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                    style="border: #FEF7FF; color: #6750A4;" data-bs-target="#nav-contact" type="button"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">Presentacion</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+                                <div class='px-3'>
+                                    <div class='col-8'>
+                                        <div class=' row mt-3'>
+                                            <div class="form-floating col-4">
+                                                <input type="text" class="form-control" id="userInput"
+                                                    placeholder=""></input>
+                                                <label for="userInput">Usuario</label>
+                                            </div>
+                                        </div>
+                                        <div class='row mt-3'>
+                                            <div class="form-floating col-4">
+                                                <input type="password" class="form-control" id="currentInput"
+                                                    placeholder=""></input>
+                                                <label for="currentInput">Contraseña Actual</label>
+                                            </div>
+
+                                            <div class="form-floating col-4">
+                                                <input type="password" class="form-control" id="newPassInput"
+                                                    placeholder=""></input>
+                                                <label for="newPassInput">Nueva Contraseña</label>
+                                            </div>
+
+                                            <div class="form-floating col-4">
+                                                <input type="password" class="form-control" id="repPassInput"
+                                                    placeholder=""></input>
+                                                <label for="repPassInput">Repetir Contraseña</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div class='px-3'>
+                                    <div class='row mt-3'>
+                                        <div class='col-6'>
+                                            <div class='row'>
+                                                <label class="px-1">Universidades</label>
+                                                <input name='tags-universidades' class='tagify--outside' placeholder=''>
+                                            </div>
+
+                                            <div class='row mt-3'>
+                                                <label class="px-1">Carreras</label>
+                                                <input name='tags-carreras' class='tagify--outside' placeholder=''>
+                                            </div>
+                                        </div>
+                                        <div class='col-1 text-center'>
+                                            <div class="vr h-100">
+                                            </div>
+                                        </div>
+                                        <div class='col-5'>
+                                            <div class="row">
+                                                <label class="px-1">Cursos</label>
+                                                <div class="row"><input name='tags-cursos' class='tagify--outside'
+                                                        placeholder=''></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                                aria-labelledby="nav-contact-tab">
+                                <div class='px-3'>
+                                    <div class='row mt-3'>
+                                        <div class="form-floating input-group-lg">
+                                            <input type="text" class="form-control" id="titleInput"
+                                                placeholder=""></input>
+                                            <label for="titleInput">Titulo</label>
+                                        </div>
+                                    </div>
+
+                                    <div class='row mt-3'>
+                                        <div class="form-floating input-group-lg">
+                                            <input type="text" class="form-control" id="presentationInput"
+                                                placeholder=""></input>
+                                            <label for="presentationInput">Presentacion</label>
+                                        </div>
+                                    </div>
+                                    <br></br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="JAVA/index.js"> </script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+    integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script>
+    var input = document.querySelector('input[name=tags-universidades]')
+    var tagify = new Tagify(input, {
+        whitelist: ["Universidad de Lima", "UPC", "San Marcos", "UNI", "Universidad Pacifico"],
+        dropdown: {
+            position: "input",
+            enabled: 0
+        }
+    })
+
+    var input = document.querySelector('input[name=tags-carreras]')
+    var tagify = new Tagify(input, {
+        whitelist: ["Ing.Sistemas", "Ing. Industrial", "Aquitectura"],
+        dropdown: {
+            position: "input",
+            enabled: 0
+        }
+    })
+
+    var input = document.querySelector('input[name=tags-cursos]')
+    var tagify = new Tagify(input, {
+        whitelist: ["Programacion Web", "Lenguaje de Programacion", "Programacion Orientada a Objetos"],
+        dropdown: {
+            position: "input",
+            enabled: 0
+        }
+    })
+
+</script>
+
+<script>
+    var rol = 'ALUMNO';
+
+    if (rol === 'PROFESOR') {
+
+        var htmlTexto = '<select class="form-select" id="floatingSelect" aria-label="Floating label select example"> <option value="1">Bachiller</option> <option value="2">Magister</option> <option value="3">Doctor</option> </select> <label for="floatingSelect">Maximo grado alcanzado</label>';
+
+    
+        var contenedor = document.getElementById("contenedorRole");
+
+        contenedor.innerHTML  = htmlTexto;
+    }
+</script>
+
+</html>

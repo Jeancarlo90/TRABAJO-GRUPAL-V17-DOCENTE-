@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+  }
+  /* Estilos para la barra de navegación */
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar {
+    background-color: rgb(234, 189, 197);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Estilos para los elementos de la barra de navegación */
+  .navbar h1 {
+    color: white;
+    margin: 0;
+  }
+
+  .navbar img {
+    height: 30px;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Estilos para las secciones */
+  .section {
+    padding: 20px;
+  }
+
+
+  .principal11 {
+    background-color: rgb(157, 159, 159);
+    display: flex;
+    flex-direction: row;
+    height: 720px;
+  }
+  
+
+  #principal12 {
+    position: relative;
+  }
+  
+  .parrafo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #principal13 {
+    background-color: rgb(241, 247, 247);
+    width: 100%;
+    height: 720px;
+
+  }
+
+  /* Estilos para los enlaces en la primera sección */
+  .section .column a {
+    display: block;
+    margin-bottom: 10px;
+
+
+  }
+a{
+  text-decoration: none; /* Quita la decoración de subrayado */
+  color: #342454; 
+}
+  /* Estilos para los campos de entrada en la segunda sección */
+  .section .input-container input {
+    margin-bottom: 10px;
+  }
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+.Fondo
+{
+    width: 90%;
+    background-position: center;
+    /*position: absolute;*/
+}
+
+.Fondo2
+{
+    width: 112%;
+
+    background-color: rgb(255, 234, 255);
+    /*arriba, derecha, abajo, izquierda*/
+    padding: 1px 0px 1px 20px;
+    border-radius: 10px;
+}
+
+.numbered-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: list-counter;
+  }
+  
+  .numbered-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    counter-increment: list-counter;
+  }
+  
+  .numbered-list li::before {
+    content: counter(list-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(251, 107, 251); /* Color de fondo del círculo */
+    color: #fff; /* Color del número */
+    text-align: center;
+    line-height: 20px;
+  }
+  p
+  {
+    padding-left: 20px;
+  }
+  

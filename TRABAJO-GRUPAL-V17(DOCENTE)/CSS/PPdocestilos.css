@@ -1,0 +1,132 @@
+
+*{
+    /*tipo de letra*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: blanchedalmond;
+}
+
+.capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #8C2DFF;
+    z-index: -1;
+    top: 0;left: 0;
+}
+
+/*Estilos para el encabezado*/
+.header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menú lateral*/
+
+/*id*/
+#btn-menu{ 
+    display: none; 
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0; /*pegado*/
+    transition: all 500ms ease;
+    opacity: 0; /*oculte el menu*/
+    visibility: hidden;
+}
+/*cuando se abra el menu*/
+#btn-menu:checked ~ .container-menu{
+    opacity: 1; /*se muestra el container menu*/
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%); /*se traslada el menu a la izq*/
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%); /*se traslada el menu a la der (pos original)*/
+}
+/*etiqueta nav*/
+.cont-menu nav{
+    transform: translateY(15%);/*hacia abajo*/
+}
+/*etiqueta a*/
+.cont-menu nav a{
+    display: block;/*cada etiqueta sera un bloque*/
+    text-decoration: none;
+    padding: 20px;/*relleno*/
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+/*al tener el cursor encima*/
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+/*etiqueta label*/
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+/*Fin de Menù lateral*/
