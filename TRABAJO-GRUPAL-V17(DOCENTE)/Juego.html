@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buscaminas</title>
+  <style>
+    .board {
+      display: inline-block;
+      border-collapse: collapse;
+    }
+    
+    .cell {
+      width: 20px;
+      height: 20px;
+      border: 1px solid black;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Buscaminas</h1>
+  
+  <div id="board-container"></div>
+  
+  <script>
+    var boardSize = 8; // Tamaño del tablero
+    var mineCount = 10; // Cantidad de minas
+    
+    var board = []; // Representación del tablero
+    
+    // Crear el tablero
+    function createBoard() {
+      var container = document.getElementById("board-container");
+      var table = document.createElement("table");
+      
+      for (var i = 0; i < boardSize; i++) {
+        var row = document.createElement("tr");
+        var rowArray = [];
+        
+        for (var j = 0; j < boardSize; j++) {
+          var cell = document.createElement("td");
+          cell.classList.add("cell");
+          cell.dataset.row = i;
+          cell.dataset.col = j;
+          cell.addEventListener("click", cellClickHandler);
+          
+          row.appendChild(cell);
+          rowArray.push({ revealed: false, mine: false, adjacentMines: 0 });
+        }
+        
+        table.appendChild(row);
+        board.push(rowArray);
+      }
+      
+      container.appendChild(table);
+    }
+    
+    // Colocar minas aleatoriamente
+    function placeMines() {
+      var count = 0;
+      
+      while (count < mineCount) {
+        var row = Math.floor(Math.random() * boardSize);
+        var col = Math.floor(Math.random() * boardSize);
+        
+        if (!board[row][col].mine) {
+          board[row][col].mine = true;
+          count++;
+        }
+      }
+    }
+    
+    // Calcular la cantidad de minas adyacentes a cada celda
+    function calculateAdjacentMines() {
+      for (var i = 0; i < boardSize; i++) {
+        for (var j = 0; j < boardSize; j++) {
+          var cell = board[i][j];
+          if (cell.mine) continue;
+          
+          var count = 0;
+          
+          for (var x = -1; x <= 1; x++) {
+            for (var y = -1; y <= 1; y++) {
+              var row = i + x;
+              var col = j + y;
+              
+              if (row >= 0 && row < boardSize && col >= 0 && col < boardSize) {
+                if (board[row][col].mine) count++;
+              }
+            }
+          }
+          
+          cell.adjacentMines = count;
+        }
+      }
+    }
+    
+    // Manejador de clic en una celda
+    function cellClickHandler(event) {
+      var row = parseInt(event.target.dataset.row);
+      var col = parseInt(event.target.dataset.col);
+      
+      revealCell(row, col);
+    }
+    
+    // Revelar una celda
+    function revealCell(row, col) {
+      var cell = board[row][col];
+      
+      if (cell.revealed) return;
+      
+      cell.revealed = true;
+      
+      if (cell.mine) {
+        alert("¡Has perdido!");
+        location.reload();
+      } else if (cell.adjacentMines > 0) {
+        event.target.textContent = cell.adjacentMines;
+      } else {
+        event.target.style.backgroundColor = "lightgray";
+        
+        for (var x = -1; x <= 1; x++) {
+          for (var y = -1; y <= 1; y++) {
+            var newRow = row + x;
+            var newCol = col + y;
+            
+            if (newRow >= 0 && newRow < boardSize && newCol >= 0 && newCol < boardSize) {
+              revealCell(newRow, newCol);
+            }
+          }
+        }
+      }
+      
+      checkWin();
+    }
+    
+    // Verificar si se ha ganado el juego
+    function checkWin() {
+      var revealedCount = 0;
+      
+      for (var i = 0; i < boardSize; i++) {
+        for (var j = 0; j < boardSize; j++) {
+          if (board[i][j].revealed) {
+            revealedCount++;
+          }
+        }
+      }
+      
+      if (revealedCount === (boardSize * boardSize) - mineCount) {
+        alert("¡Has ganado!");
+        location.reload();
+      }
+    }
+    
+    // Crear el tablero y comenzar el juego
+    createBoard();
+    placeMines();
+    calculateAdjacentMines();
+  </script>
+</body>
+</html>

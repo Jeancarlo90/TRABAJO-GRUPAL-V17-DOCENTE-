@@ -5,9 +5,13 @@ function cargar()
     usua=document.getElementById("Usuario").value;
     contra=document.getElementById("Contraseña").value;
 
-    if(usua == "p" && contra == "o")
+    if(usua == "docente" && contra == "1234")
     {
         window.location = "EncabeyLat.html";
+    }
+    if(usua == "alumno" && contra == "4321")
+    {
+        window.location = "PAlumno.html";
     }
     else{
         alert("Datos incorrectos");

@@ -15,8 +15,8 @@
     /*para el fondo en toda la pantalla*/
 body{
     background-image: url(fondou.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
+    /*background-position: center center;*/
+    /*background-repeat: no-repeat;*/
     background-size: cover;
     background-attachment: fixed;
 }
@@ -89,7 +89,7 @@ body{
     flex-direction: column;
     justify-items: center;
     position: absolute;
-    background-color: aqua;
+    background-color: gainsboro;
     /*arriba, derecha, abajo, izquierda*/
     padding: 40px 50px 20px 50px;
     /*Para que el texto este centralizado en todo momento*/
@@ -118,10 +118,11 @@ body{
     height: 540px;
     z-index: 1;
     margin: 6% auto;
-    background-color: skyblue;
+    background-color: gainsboro;
     /*arriba, derecha, abajo, izquierda*/
     padding: 5px;
     border-radius: 10px;
+    /*Para que no se muestre fuera del recuadro div*/
     overflow: hidden;
 }
 
@@ -165,7 +166,7 @@ body{
     /*background-color: aquamarine;*/
     width: 100px;
     height: 100%;
-    background: linear-gradient(to right,rgb(0, 107, 213), rgb(220, 117, 13));
+    background: linear-gradient(to right,rgb(0, 107, 213), aqua);
     border-radius: 30px;
     transition: 0.8s;
 }

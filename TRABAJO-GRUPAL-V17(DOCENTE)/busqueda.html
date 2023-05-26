@@ -29,15 +29,15 @@
     <div class="Titulo">
       <h1>Atencion de Citas</h1>
     </div>
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+    <div class="container-fluid" >
+        <div class="row flex-nowrap" >
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0" id="Columna1" >
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100" >
                     <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-5 d-none d-sm-inline"></span>
                     </a>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
+                        <a class="nav-link active" aria-current="page" href="PAlumno.html"
                           >Principal</a
                         >
                       </li>
@@ -45,31 +45,26 @@
                         <a class="nav-link" href="busqueda.html">Busqueda</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="MostrarCitas.html">Horarios</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="CitasDocente.html">Citas</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="NotasDocente.html">Calificaciones</a>
+                        <a class="nav-link" href="index.html">Citas</a>
                       </li>
                     <hr>
                 </div>
             </div>
-            <div class="col py-3">
-                <h1>Busqueda de Profesores</h1>
+            <div class="col-auto">
+                <h2 class="BusquedaProf">Busqueda de Profesores</h2>
                 <form id="formulario-busqueda">
-                    <label for="busqueda">Buscar por nombre o nombre de universidad:</label>
+                    <label for="busqueda">Buscar por nombre </label>
                     <input
                       type="text"
                       id="busqueda"
                       name="busqueda"
                       placeholder="Ingrese término de búsqueda"
                     />
-                    <button class="btn btn-danger mx-3" type="submit">Buscar</button>
+                    <button class="btn btn-danger mx-3 " type="submit">Buscar</button>
+              
                   </form>
-            
                   <div id="resultado-busqueda"></div>
+
             </div>
         </div>
   </body>

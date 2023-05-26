@@ -6,25 +6,26 @@ class Profesor {
     }
   }
 
+
   var profesor1 = new Profesor(
     "Juan Lopez",
     "Universidad de Lima",
-    "2023-01-15"
+    "2023-05-26"
   );
   var profesor2 = new Profesor(
-    "Ricardo ramirez",
+    "Pedro ramirez",
     "Universidad de Lima ",
-    "2023-12-10"
+    "2023-05-27"
   );
   var profesor3 = new Profesor(
     "Marcelo Otiniano",
     "Universidad de Lima",
-    "2023-12-05"
+    "2023-05-28"
   );
   var profesor4 = new Profesor(
     "Marcelo Jimenez",
     "Universidad de Lima",
-    "2023-12-10"
+    "2023-05-29"
   );
 
   var formularioBusqueda = document.getElementById("formulario-busqueda");
@@ -68,12 +69,14 @@ class Profesor {
 
     resultadoBusqueda.innerHTML = "";
 
-    resultadoBusqueda.innerHTML = "";
-
+  
     if (resultados.length > 0) {
-      for (var i = 0; i < resultados.length; i++) {
-        var profesor = resultados[i];
+      for (var i = 0; i < resultados.length; i++) {  
+        var profesor = resultados[i]
+        const Boton = document.createElement("button");
+        var hoy = parseInt(String(profesor.fecha).substring(8, 10));
         var divResultado = document.createElement("div");
+        Boton.className = "BtnReserva"
         divResultado.classList.add("resultado");
         divResultado.innerHTML =
           "<h3>" +
@@ -84,10 +87,17 @@ class Profesor {
           "</p>" +
           "<p>Fecha: " +
           profesor.fecha +
+          hoy+
           "</p>";
+        Boton.innerHTML = "Reservar"
         resultadoBusqueda.appendChild(divResultado);
+        resultadoBusqueda.appendChild(Boton);
+        Boton.onclick = function(){
+              window.location.href = "index.html";
+        }
       }
     } else {
       resultadoBusqueda.innerHTML = "<p>No se encontraron resultados.</p>";
     }
   });
+

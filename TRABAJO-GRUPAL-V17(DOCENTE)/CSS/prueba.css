@@ -13,3 +13,70 @@ li{
 .Profesor{
     border: 1px outset;
 }
+
+#Columna1{
+    background-color: #f2f2f2;
+}
+
+a{
+    color: black;
+}
+
+.nav-item{
+    color: #6757a5;
+    
+}
+.nav-link{
+    
+    
+}
+
+
+.Titulo{
+    background-color: #f4ecf4 ;
+}
+
+
+
+
+.resultado{
+    
+    margin-top: 50px;
+    margin-left: 30px;
+    border-left: 15px solid #6757a5;
+    border-collapse: separate;
+    padding-left: 10px;
+    
+}
+
+.BtnReserva{
+
+    background-color: #f4ecf4;
+    max-height: 30px;
+    align-self: center;
+    margin-top: 35px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+#resultado-busqueda{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#fechabusq{
+    max-width: 200px;
+    border-color: black;
+    max-height: 50px;
+}
+
+
+#busqueda{
+    border-radius: 5px;
+    max-height: 50px;
+
+}
+
+.ocultar{
+    display: none;
+}
